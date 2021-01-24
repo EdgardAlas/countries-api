@@ -1,0 +1,60 @@
+.main-header {
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav {
+    width: 100%;
+
+    &__title-section {
+        background-color: var(--element-color);
+        display: flex;
+        justify-content: space-between;
+        padding: 1.2rem;
+        box-shadow: 0 0.4rem 10px -13px $dark-blue;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__search-section{
+        padding: 1.2rem;
+        display: grid;
+
+        @media screen and (min-width: 769px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__input-country{
+        max-width: 100%;
+        min-width: 320px;
+        font-size: 15px;
+        padding: 0.7rem;
+        border: 0;
+        background: var(--element-color);
+        box-shadow: 0 0 20px -11px var(--input-color);
+        color: var(--text-color);
+        border-radius: 0.3rem;
+        margin-bottom: 20px;
+        outline: none;
+
+        @media screen and (min-width: 769px) {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__select-region{
+        appearance: none;
+        margin-top: 1.2rem;
+        width: 50%;
+        padding: 0.3rem;
+        border: 0;
+        box-shadow: 0 0 20px -11px $dark-blue;
+        border-radius: 0.3rem;
+    }
+
+}

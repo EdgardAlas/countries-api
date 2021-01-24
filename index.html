@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>REST Countries API with color theme switcher</title>
+</head>
+
+<body class="">
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <section class="main-nav__title-section">
+                <h1 class="main-nav__title">
+                    Where in the world?
+                </h1>
+                <button class="theme-switch">
+
+                </button>
+            </section>
+            <div class="main-nav__search-section">
+                <input type="search" name="input-country" id="input-country" class="main-nav__input-country" autofocus>
+                <div class="dropdown">
+                    <div class="dropdown__select">
+                        <span class="dropdown__text-content" data-value=-1>Filter by Region</span>
+                        <i class="fas fa-angle-down dropdown__open-button"></i>
+                    </div>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item" data-value=africa>Africa</li>
+                        <li class="dropdown__item" data-value=americas>Americas</li>
+                        <li class="dropdown__item" data-value=asia>Asia</li>
+                        <li class="dropdown__item" data-value=europe>Europe</li>
+                        <li class="dropdown__item" data-value=oceania>Oceania</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="countries">
+        
+    </section>
+    <template id="country-card">
+        <article class="card">
+            <section class="card__header">
+                <img src="" alt="country" class="card__flag">
+            </section>
+            <section class="card__body">
+                <h2 class="card__country-name" data-country-code=""></h2>
+                <p class="card__property" >Population: <span class="card__value" id="population"></span></p>
+                <p class="card__property" >Region: <span class="card__value" id="region"></span></p>
+                <p class="card__property" >Capital: <span class="card__value" id="capital"></span></p>
+            </section>
+        </article>
+    </template>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/b73604ba2f.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/js.js"></script>
+</body>
+
+</html>

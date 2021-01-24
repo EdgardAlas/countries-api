@@ -1,0 +1,102 @@
+// Dark Mode Elements
+$dark-blue : hsl(209, 23%, 22%);
+
+// Dark Mode Background
+$very-dark-blue-bg: hsl(207, 26%, 17%);
+
+// Light Mode Text
+$very-dark-blue-text: hsl(200, 15%, 8%);
+
+// Light Mode Input
+$dark-gray: hsl(0, 0%, 52%);
+
+// Light Mode Background
+$very-light-gray: hsl(0, 0%, 98%);
+
+// Dark Mode Text & Light Mode Elements
+$white: hsl(0, 0%, 100%);
+
+// font
+
+$font-family: 'Nunito Sans',
+sans-serif;
+$font-size-items: 14px;
+$font-size-detail: 16px;
+$font-awesome: "Font Awesome 5 Free";
+
+$card-width: 250px;
+$card-height: 250px;
+
+
+%theme-commons {
+    position: absolute;
+    top: 0;
+    font-size: 15px;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    color: var(--text-color);
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --bg: #{$very-light-gray};
+    --text-color: #{$very-dark-blue-text};
+    --input-color: #{$dark-gray};
+    --element-color: #{$white};
+    --invers: #{$dark-blue};
+    --theme-icon: '\f186';
+    --theme-text: 'Dark Mode';
+
+    margin: 0;
+    background-color: var(--bg);
+    font-family: $font-family;
+    color: var(--text-color);
+
+    &.dark {
+        --bg: #{$very-dark-blue-bg};
+        --text-color: #{$white};
+        --input-color: #{$dark-gray};
+        --element-color: #{$dark-blue};
+        --invers: #{$very-light-gray};
+        --theme-icon: '\f185';
+        --theme-text: 'Light Mode';
+    }
+}
+
+.theme-switch {
+    position: relative;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &::before {
+        @extend %theme-commons;
+        font-family: $font-awesome;
+        left: -6.5rem;
+        content: var(--theme-icon);
+    }
+
+
+
+    &::after {
+        @extend %theme-commons;
+        left: -5rem;
+        width: 6rem;
+        height: 2rem;
+        content: var(--theme-text);
+    }
+
+
+}
