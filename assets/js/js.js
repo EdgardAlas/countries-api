@@ -12,9 +12,9 @@ const createCards = (countries) => {
         console.log(countryData);
 
         cardClone.querySelector('.card__flag').src = countryData.flag
-        cardClone.querySelector('.card__country-name').textContent = countryData.population
-        cardClone.querySelector('.card__country-name').setAttribute('data-country-code', countryData.alpha)
-        cardClone.querySelector('#population').textContent = countryData.population
+        cardClone.querySelector('.card__country-name').textContent = countryData.name
+        cardClone.querySelector('.card__country-name').setAttribute('data-country-code', countryData.alpha2Code)
+        cardClone.querySelector('#population').textContent = countryData.population.toLocaleString()
         cardClone.querySelector('#region').textContent = countryData.region
         cardClone.querySelector('#capital').textContent = countryData.capital
         fragment.appendChild(cardClone)
